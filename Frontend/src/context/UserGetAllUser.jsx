@@ -11,7 +11,7 @@ const UserGetAllUser = () => {
      Setloading(true);
     try {
      const token = Cookies.get("jwt");
-     const response = await axios.get("http://localhost:5000/user/allUser",{
+     const response = await axios.get("https://chatapp-e3x9.onrender.com/user/allUser",{
     withCredentials: true,
     headers: {
         Authorization:`Bearer ${token}`

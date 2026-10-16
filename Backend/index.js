@@ -10,10 +10,12 @@ import { app, server } from "./socketIO/server.js";
 dotenv.config();
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors({
-    origin: "http://localhost:5173",
-    credentials: true
-}));
+app.use(
+  cors({
+    origin: "https://chat-app-first-23.vercel.app",
+    credentials: true,
+  })
+);
 const port = process.env.PORT || 4001;
 Connect();
 

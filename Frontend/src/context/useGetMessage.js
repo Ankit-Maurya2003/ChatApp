@@ -11,7 +11,7 @@ const useGetMessage = () => {
                 setLoading(true);
                 try {
 
-               const response= await axios.get(`http://localhost:5000/sendUser/get/${selectedConversation._id}`,
+               const response= await axios.get(`https://chatapp-e3x9.onrender.com/sendUser/get/${selectedConversation._id}`,
                 {
                     withCredentials:true
                 }

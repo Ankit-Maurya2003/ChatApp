@@ -9,7 +9,7 @@ const Logout = () => {
   const handleLogout = async ()=>{
     Setloading(true)
     try {
-      const response= await axios.post("http://localhost:5000/user/Logout",
+      const response= await axios.post("https://chatapp-e3x9.onrender.com/user/Logout",
          {},
     {
         withCredentials: true

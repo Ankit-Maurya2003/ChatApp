@@ -20,7 +20,7 @@ const useSendMessage = () => {
     try {
 
       const response = await axios.post(
-        `http://localhost:5000/sendUser/send/${selectedConversation._id}`,
+        `https://chatapp-e3x9.onrender.com/sendUser/send/${selectedConversation._id}`,
         {
           message: message
         },
