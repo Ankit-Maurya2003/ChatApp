@@ -2,19 +2,37 @@ import React from "react";
 import Left from "./home/left/Left";
 import Right from "./home/right/Right";
 import userConversation from "./zustand/UserConversation";
+
 const Home = () => {
-  const{selectedConversation}=userConversation();
+  const { selectedConversation } = userConversation();
+
   return (
-    <>
-      <div className="grid grid-cols-10 h-screen ">
-      <div className={`md:col-span-3  origin-top col-span-10 ${selectedConversation?"scale-0  duration-300":"scale-100  duration-300"} md:block  md:scale-100`} >
+    <div className="w-full h-[100dvh] overflow-hidden bg-black">
+
+      <div className="grid w-full h-full grid-cols-1 md:grid-cols-10">
+
+        {/* LEFT */}
+        <div
+          className={`
+            w-full h-full md:col-span-3
+            ${selectedConversation ? "hidden md:block" : "block"}
+          `}
+        >
           <Left />
-      </div>
-        <div className={`md:col-span-7  origin-bottom col-span-10 ${!selectedConversation?"scale-0  duration-300":"scale-100  duration-300"} md:block  md:scale-100`}>
+        </div>
+
+        {/* RIGHT */}
+        <div
+          className={`
+            w-full h-full md:col-span-7
+            ${selectedConversation ? "block" : "hidden md:block"}
+          `}
+        >
           <Right />
         </div>
+
       </div>
-    </>
+    </div>
   );
 };
 
