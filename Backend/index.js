@@ -13,7 +13,10 @@ app.use(cookieParser());
 
 app.use(
   cors({
-    origin: "https://chat-app-first-23.vercel.app",
+    origin: [
+      "http://localhost:5173",
+      "https://chat-app-first-23.vercel.app",
+    ],
     credentials: true,
   })
 );
