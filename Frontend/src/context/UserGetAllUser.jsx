@@ -10,12 +10,9 @@ const UserGetAllUser = () => {
    const getUser = async ()=>{
      Setloading(true);
     try {
-     const token = Cookies.get("jwt");
+    
      const response = await axios.get("https://chatapp-e3x9.onrender.com/user/allUser",{
-    withCredentials: true,
-    headers: {
-        Authorization:`Bearer ${token}`
-     }
+    withCredentials: true
      })
     
      SetAllUser(response.data);  
