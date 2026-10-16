@@ -10,6 +10,7 @@ import { app, server } from "./socketIO/server.js";
 dotenv.config();
 app.use(express.json());
 app.use(cookieParser());
+
 app.use(
   cors({
     origin: "https://chat-app-first-23.vercel.app",
