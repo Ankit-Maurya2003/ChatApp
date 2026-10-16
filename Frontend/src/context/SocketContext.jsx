@@ -10,29 +10,32 @@ export const SocketProvider = ({ children }) => {
   const { AuthUser } = useAuth();
 
   useEffect(() => {
-    if (AuthUser) {
-      const newSocket = io("https://chatapp-e3x9.onrender.com", {
-        query: {
-          userId: AuthUser.user._id
-        }
-      });
 
-      setSocket(newSocket);
-
-      newSocket.on("getOnlineUser", (users) => {
-       
-        setOnline(users);
-      });
-
-      return () => {
-        newSocket.disconnect();
-        setSocket(null);
-        setOnline([]);
-      };
+    // AuthUser nahi hai to socket mat banao
+    if (!AuthUser?.user?._id) {
+      setSocket(null);
+      setOnline([]);
+      return;
     }
 
-    setSocket(null);
-    setOnline([]);
+    const newSocket = io("https://chatapp-e3x9.onrender.com", {
+      query: {
+        userId: AuthUser.user._id,
+      },
+      withCredentials: true,
+    });
+
+    setSocket(newSocket);
+
+    newSocket.on("getOnlineUser", (users) => {
+      setOnline(users);
+    });
+
+    return () => {
+      newSocket.disconnect();
+      setSocket(null);
+      setOnline([]);
+    };
 
   }, [AuthUser]);
 
