@@ -1,26 +1,29 @@
-import React from 'react'
-import Search from './Search'
-import Users from './Users'
-import Logout from './Logout'
-const Left = () => {
-  
-  return (
-    <>
-<div>
-        <div className='text-gray-300 col-span-3 grid grid-rows-10   bg-black h-screen overflow-hidd'>
-     <div className='row-span-1 z-50'>
-        <Search />
-     </div>
-       <div className='row-span-8 overflow-auto scrollbar-none'>
-        <Users/>
-       </div>
-    <div className='row-span-1 '>
-         <Logout/>
-    </div>
-      </div>
-</div>
-    </>
-  )
-}
+import React from "react";
+import Search from "./Search";
+import Users from "./Users";
+import Logout from "./Logout";
 
-export default Left
+const Left = () => {
+  return (
+    <div className="w-full h-full text-gray-300 bg-black flex flex-col overflow-hidden">
+
+      {/* Search */}
+      <div className="w-full shrink-0 z-50">
+        <Search />
+      </div>
+
+      {/* Users */}
+      <div className="flex-1 min-h-0 overflow-y-auto scrollbar-none">
+        <Users />
+      </div>
+
+      {/* Logout */}
+      <div className="w-full shrink-0">
+        <Logout />
+      </div>
+
+    </div>
+  );
+};
+
+export default Left;

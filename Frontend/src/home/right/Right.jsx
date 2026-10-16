@@ -1,46 +1,62 @@
-import React from 'react'
-import ChatUser from './ChatUser'
-import Messages from './Messages'
-import TypeSend from './TypeSend'
-import { useEffect } from 'react'
-import { useAuth } from '../../context/AuthProvider'
-import userConversation from '../../zustand/UserConversation'
+import React from "react";
+import ChatUser from "./ChatUser";
+import Messages from "./Messages";
+import TypeSend from "./TypeSend";
+import { useAuth } from "../../context/AuthProvider";
+import userConversation from "../../zustand/UserConversation";
+
 const Right = () => {
-  const {AuthUser}=useAuth();
-  const {selectedConversation,setSelectedConversation}=userConversation();
- 
+  const { AuthUser } = useAuth();
+
+  const { selectedConversation } = userConversation();
+
   return (
-    <>
-   {!selectedConversation?(
-    <div className='flex justify-center h-screen w-full  items-center  '>
-      <p className='text-center w-full  '>Welcome <span>{AuthUser.user.fullname}</span>
-    
-     <br />
-     <span>No any User Selected For Chat</span>
-        </p>
-        
+    <div className="w-full h-full bg-slate-900 text-gray-300 overflow-hidden">
+
+      {!selectedConversation ? (
+
+        /* Welcome Screen */
+        <div className="w-full h-full flex items-center justify-center px-4">
+          <p className="text-center text-lg">
+            Welcome{" "}
+            <span className="font-semibold">
+              {AuthUser?.user?.fullname}
+            </span>
+
+            <br />
+
+            <span className="text-sm text-gray-400">
+              No any User Selected For Chat
+            </span>
+          </p>
+        </div>
+
+      ) : (
+
+        /* Chat Screen */
+        <div className="w-full h-full flex flex-col">
+
+          {/* Chat Header */}
+          <div className="w-full shrink-0">
+            <ChatUser />
+          </div>
+
+          {/* Messages - ONLY THIS WILL SCROLL */}
+          <div className="flex-1 min-h-0 overflow-y-auto scrollbar-none">
+            <Messages />
+          </div>
+
+          {/* Message Input */}
+          <div className="w-full shrink-0">
+            <TypeSend />
+          </div>
+
+        </div>
+
+      )}
 
     </div>
-   ):(
-<div>
-       <div className='text-gray-300   col-span-7 h-screen w-full bg-slate-900 grid grid-rows-10'>
-      <div className='row-span-1  '>
-         <ChatUser/>
-      </div>
-      <div className='row-span-8 overflow-auto  scrollbar-none'>
-       <Messages/>
-        
-      </div>
-      <div className='row-span-1 '>
-         
-       <TypeSend/>
-      </div>
-    </div>
-</div>
-   )}
-      
-    </>
-  )
-}
+  );
+};
 
-export default Right
+export default Right;
