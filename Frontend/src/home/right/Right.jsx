@@ -11,7 +11,7 @@ const Right = () => {
   const { selectedConversation } = userConversation();
 
   return (
-    <div className="w-full h-full bg-slate-900 text-gray-300 overflow-hidden">
+<>
 
       {!selectedConversation ? (
 
@@ -35,6 +35,7 @@ const Right = () => {
 
         /* Chat Screen */
         <div className="w-full h-full flex flex-col overflow-hidden">
+          
 
           {/* Chat Header */}
           <div className="w-full shrink-0">
@@ -55,7 +56,8 @@ const Right = () => {
 
       )}
 
-    </div>
+    
+    </>
   );
 };
 

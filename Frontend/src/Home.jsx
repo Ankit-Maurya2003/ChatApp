@@ -14,7 +14,7 @@ const Home = () => {
         {/* LEFT */}
         <div
           className={`
-            w-full h-full md:col-span-3
+            w-full h-full min-h-0 md:col-span-3
             ${selectedConversation ? "hidden md:block" : "block"}
           `}
         >
@@ -24,7 +24,7 @@ const Home = () => {
         {/* RIGHT */}
         <div
           className={`
-            w-full h-full md:col-span-7
+            w-full h-full min-h-0 md:col-span-7
             ${selectedConversation ? "block" : "hidden md:block"}
           `}
         >
