@@ -18,7 +18,7 @@ const ChatUser = () => {
         ← Back
 
        </button>
-     <div className="flex space-x-3 justify-center h-full   items-center  bg-black hover:bg-gray-700 duration-300">
+     <div className="flex space-x-3 justify-center h-full   items-center  bg-slate-700 hover:bg-gray-700 duration-300">
             <div className={`avatar `}>
 
         <div className="w-14 rounded-full">
