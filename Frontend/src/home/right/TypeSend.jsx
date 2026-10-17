@@ -20,7 +20,7 @@ const handleSubmit = async(e)=>{
           type="text"
           value={message}
           onChange={(e)=>setMessage(e.target.value)}
-          className="input w-full h-10  bg-slate-600 text-white outline-none border-none"
+          className="input w-full h-15  bg-slate-600 text-white outline-none border-none"
           placeholder="Type here"
         />
       </div>

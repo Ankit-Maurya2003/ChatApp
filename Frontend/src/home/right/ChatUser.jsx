@@ -29,8 +29,8 @@ const ChatUser = () => {
         </div>
       </div>
       <div >
-        <h1 className="font-bold text-xl">{selectedConversation?.fullname}</h1>
-        <span className="text-sm">{getOnline(selectedConversation._id)}</span>
+        <h1 className="font-bold text-xl text-white">{selectedConversation?.fullname}</h1>
+        <span className="text-sm text-white">{getOnline(selectedConversation._id)}</span>
       </div>
      </div>
 
