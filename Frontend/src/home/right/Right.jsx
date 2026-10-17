@@ -34,14 +34,14 @@ const Right = () => {
       ) : (
 
         /* Chat Screen */
-        <div className="w-full h-screen flex flex-col">
+        <div className="w-full h-full flex flex-col overflow-hidden">
 
           {/* Chat Header */}
           <div className="w-full shrink-0">
             <ChatUser />
           </div>
 
-          {/* Messages - ONLY THIS WILL SCROLL */}
+          {/* Messages */}
           <div className="flex-1 min-h-0 overflow-y-auto scrollbar-none">
             <Messages />
           </div>
