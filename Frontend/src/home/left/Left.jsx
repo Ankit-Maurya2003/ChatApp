@@ -5,7 +5,7 @@ import Logout from "./Logout";
 
 const Left = () => {
   return (
-    <div className="w-full h-full text-gray-300 bg-black flex flex-col overflow-hidden">
+    <div className="w-full h-screen text-gray-300 bg-black flex flex-col overflow-hidden">
 
       {/* Search */}
       <div className="w-full shrink-0 z-50">
@@ -18,7 +18,7 @@ const Left = () => {
       </div>
 
       {/* Logout */}
-      <div className="w-full shrink-0">
+      <div className="w-full h-15 shrink-0">
         <Logout />
       </div>
 

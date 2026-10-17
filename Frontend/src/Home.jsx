@@ -7,9 +7,9 @@ const Home = () => {
   const { selectedConversation } = userConversation();
 
   return (
-    <div className="w-full h-[100dvh] overflow-hidden bg-black">
+    
 
-      <div className="grid w-full h-full grid-cols-1 md:grid-cols-10">
+      <div className="grid w-full h-screen grid-cols-1 md:grid-cols-10">
 
         {/* LEFT */}
         <div
@@ -32,7 +32,7 @@ const Home = () => {
         </div>
 
       </div>
-    </div>
+    
   );
 };
 

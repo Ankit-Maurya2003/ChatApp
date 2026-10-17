@@ -34,7 +34,7 @@ const Right = () => {
       ) : (
 
         /* Chat Screen */
-        <div className="w-full h-full flex flex-col">
+        <div className="w-full h-screen flex flex-col">
 
           {/* Chat Header */}
           <div className="w-full shrink-0">

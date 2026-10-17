@@ -12,7 +12,7 @@ const Users = () => {
       
     
 
-      <div className="mt-10">
+      <div className="">
         {AllUser.map((user,index)=>(
           <User key={index} user={user}/>
         ))}
