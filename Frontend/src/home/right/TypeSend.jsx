@@ -24,7 +24,7 @@ const handleSubmit = async(e)=>{
           placeholder="Type here"
         />
       </div>
-      <button className=" text-3xl ">
+      <button className=" text-3xl text-white ">
         <IoSend />
       </button>
     </div>
