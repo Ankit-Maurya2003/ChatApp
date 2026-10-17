@@ -9,7 +9,7 @@ const Home = () => {
   return (
     
 
-      <div className="grid w-full h-screen grid-cols-1 md:grid-cols-10">
+      <div className="grid w-full h-[100dvh] grid-cols-1 md:grid-cols-10">
 
         {/* LEFT */}
         <div
