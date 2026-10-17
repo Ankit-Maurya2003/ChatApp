@@ -14,7 +14,7 @@ const ChatUser = () => {
 
     <div className="relative" >
 
-       <button type="button" onClick={()=>setSelectedConversation(null)} className="bg-amber-700 absolute top-2 px-3 py-2 flex justify-center items-center rounded-lg">
+       <button type="button" onClick={()=>setSelectedConversation(null)} className="bg-amber-700 absolute text-white top-2 px-3 py-2 flex justify-center items-center rounded-lg">
         ← Back
 
        </button>

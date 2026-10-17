@@ -43,7 +43,7 @@ const Right = () => {
           </div>
 
           {/* Messages */}
-          <div className="flex-1 min-h-0 overflow-y-auto scrollbar-none">
+          <div className="flex-1 min-h-0 overflow-y-auto bg-slate-800 scrollbar-none">
             <Messages />
           </div>
 
