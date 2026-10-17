@@ -24,7 +24,7 @@ const formatedTime= createdAt.toLocaleString([],{
     
 
   </div>
-  <div className='chat-footer'>
+  <div className='chat-footer text-white'>
     {formatedTime}
   </div>
   
